@@ -22,27 +22,25 @@ export default function About() {
           </p>
           <p>I am also passionate about theater and jiujitsu.</p>
           <p>Thank you for visiting!</p>
-          <p>
-            <div id="cta_links">
-              <a
-                href="https://www.linkedin.com/in/michaelradzwilla/"
-                target="_blank"
-                alt="linkedin"
-              >
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-              <a
-                href="https://github.com/mradzwilla"
-                target="_blank"
-                alt="Github"
-              >
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-              <a href="mailto:mradzwilla@gmail.com" alt="Email">
-                <FontAwesomeIcon icon={faEnvelope} />
-              </a>
-            </div>
-          </p>
+          <div id="cta_links">
+            <a
+              href="https://www.linkedin.com/in/michaelradzwilla/"
+              target="_blank"
+              alt="linkedin"
+            >
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+            <a
+              href="https://github.com/mradzwilla"
+              target="_blank"
+              alt="Github"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a href="mailto:mradzwilla@gmail.com" alt="Email">
+              <FontAwesomeIcon icon={faEnvelope} />
+            </a>
+          </div>
         </div>
       </div>
       <DownArrow />
