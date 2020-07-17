@@ -27,10 +27,12 @@ export default function Project({
             ))}
           </ul>
           <div className="links">
-            <a href="http://lets-get-trivial.herokuapp.com/" target="_blank">
-              <FontAwesomeIcon icon={faPlay} />
-            </a>
-            <a href="https://github.com/mradzwilla/triviaApp" target="_blank">
+            {demo && (
+              <a href={demo} target="_blank" aria-label="Demo">
+                <FontAwesomeIcon icon={faPlay} />
+              </a>
+            )}
+            <a href={github} target="_blank" aria-label="Github">
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </div>
