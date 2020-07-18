@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useRef, useLayoutEffect } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
@@ -29,7 +29,7 @@ export default function Project({
 
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [show]);
 
   return (
     <div className={`project-container${show ? " in" : ""}`} ref={item}>
@@ -47,11 +47,21 @@ export default function Project({
           </ul>
           <div className="links">
             {demo && (
-              <a href={demo} target="_blank" aria-label="Demo">
+              <a
+                href={demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Demo"
+              >
                 <FontAwesomeIcon icon={faPlay} />
               </a>
             )}
-            <a href={github} target="_blank" aria-label="Github">
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Github"
+            >
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </div>

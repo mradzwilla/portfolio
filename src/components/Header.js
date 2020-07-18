@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import DownArrow from "./DownArrow";
 import lightbulb from "../assets/lightbulb.png";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Header() {
   return (

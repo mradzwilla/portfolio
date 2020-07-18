@@ -11,9 +11,13 @@ import { ThemeProvider } from "./contexts/theme";
 import { useDarkMode } from "./useDarkMode";
 
 function App() {
-  const [theme, setTheme] = useDarkMode();
+  const [theme, setTheme, componentMounted] = useDarkMode();
   const toggleTheme = () =>
     setTheme((theme) => (theme === "light" ? "dark" : "light"));
+
+  if (!componentMounted) {
+    return <div />;
+  }
 
   return (
     <ThemeProvider value={theme}>
@@ -21,7 +25,7 @@ function App() {
         <Header />
         <About theme={theme} />
         <Projects />
-        <DarkModeButton toggleTheme={toggleTheme} />
+        <DarkModeButton theme={theme} toggleTheme={toggleTheme} />
       </div>
     </ThemeProvider>
   );

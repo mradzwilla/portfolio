@@ -26,10 +26,15 @@ export default function About({ theme }) {
             <a
               href="https://www.linkedin.com/in/michaelradzwilla/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faLinkedin} alt="Linkedin" />
             </a>
-            <a href="https://github.com/mradzwilla" target="_blank">
+            <a
+              href="https://github.com/mradzwilla"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faGithub} alt="Github" />
             </a>
             <a href="mailto:mradzwilla@gmail.com">
