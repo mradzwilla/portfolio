@@ -1,22 +1,29 @@
 import React from "react";
 
 import "normalize.css";
-import "./assets/css/index.css";
-import "./assets/css/animate.css";
+import "./index.scss";
 
 import Header from "./components/Header";
+import DarkModeButton from "./components/DarkModeButton";
 import About from "./components/About";
-import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import { ThemeProvider } from "./contexts/theme";
+import { useDarkMode } from "./useDarkMode";
 
 function App() {
+  const [theme, setTheme] = useDarkMode();
+  const toggleTheme = () =>
+    setTheme((theme) => (theme === "light" ? "dark" : "light"));
+
   return (
-    <div className="App">
-      <Header />
-      <About />
-      
-      <Projects />
-    </div>
+    <ThemeProvider value={theme}>
+      <div className={`App ${theme}`}>
+        <Header />
+        <About theme={theme} />
+        <Projects />
+        <DarkModeButton toggleTheme={toggleTheme} />
+      </div>
+    </ThemeProvider>
   );
 }
 

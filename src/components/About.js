@@ -3,13 +3,15 @@ import DownArrow from "./DownArrow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import darkPhoto from "../assets/dark-mode-photo.jpg";
+import lightPhoto from "../assets/headshot.jpg";
 
-export default function About() {
+export default function About({ theme }) {
   return (
     <section>
       <div className="about" id="about">
         <div className="left">
-          <img src="/images/headshot.jpg" alt="" />
+          <img src={theme === "light" ? lightPhoto : darkPhoto} alt="" />
         </div>
         <div className="right">
           <h1>About Me</h1>
