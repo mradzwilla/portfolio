@@ -10,7 +10,7 @@ export default function Projects() {
         photo="crowdcoin.png"
         description="Social networking site for developers"
         skills={["Web3", "Solidity", "React", "Semantic UI React"]}
-        github="https://github.com/mradzwilla/ethereum-kickstarterr"
+        github="https://github.com/mradzwilla/ethereum-kickstarter"
       />
       <Project
         title="DevConnector"
