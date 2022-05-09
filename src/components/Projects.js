@@ -6,6 +6,13 @@ export default function Projects() {
     <section className="projects">
       <h1>Projects</h1>
       <Project
+        title="CrowdCoin"
+        photo="crowdcoin.png"
+        description="Social networking site for developers"
+        skills={["Web3", "Solidity", "React", "Semantic UI React"]}
+        github="https://github.com/mradzwilla/ethereum-kickstarterr"
+      />
+      <Project
         title="DevConnector"
         photo="devconnector.png"
         description="Social networking site for developers"
